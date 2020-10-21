@@ -1,8 +1,17 @@
 const express = require('express');
-
+const db = require("../data/config")
 const Schemes = require('./scheme-model.js');
 
-const router = express.Router();
+const router = express.Router()
+
+//welcome page 
+
+// router.get("/", (req, res, next) => {
+// 	res.json({
+// 		message: "Welcome furnooo",
+// 	})
+// })
+
 
 router.get('/', (req, res) => {
   Schemes.find()
